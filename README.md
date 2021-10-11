@@ -1,1 +1,1 @@
-[Open in StackBlitz ⚡️](https://github.com/fatihmuhamadridho/Project/tree/fifi)
+[Open in StackBlitz ⚡️](https://stackblitz.com/github/fatihmuhamadridho/Project/tree/fifi)
