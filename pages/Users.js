@@ -24,6 +24,9 @@ const Users = () => {
     dispatch(getUsers());
   }, []);
 
+  // SEARCH TITLE
+  const [inputSearch, setInputSearch] = useState("");
+
   //userEdit
   const [userEdit, setUserEdit] = useState({
     id: "",
@@ -42,6 +45,11 @@ const Users = () => {
     let data = { ...userEdit };
     data[e.target.name] = e.target.value;
     setUserEdit(data);
+  };
+
+  const handleChangeSearch = (e) => {
+    e.preventDefault();
+    setInputSearch(e.target.value);
   };
 
   const handleEdit = (user) => {
@@ -128,18 +136,44 @@ const Users = () => {
       <section className="article">
         <title>Users</title>
         <h1 style={{ lineHeight: "0px", marginTop: "80px" }}>List User</h1>
-        <div className="header">
+        <div className="Header">
           <button onClick={() => setModalIsOpen(true)} className="bn54">
             Add New User
           </button>
-          <br />
+
+          {/* SEACRH PRODUCT BY TITLE */}
+          <div className="search">
+            <form id="animated">
+              {" "}
+              <input
+                name={inputSearch}
+                type="text"
+                placeholder="Search Users Here..."
+                onChange={handleChangeSearch}
+                value={inputSearch}
+                className="input-search"
+              />
+            </form>
+          </div>
         </div>
+        <br />
+        
         <div>
           {loading
             ? "Loading..."
             : error
             ? error.message
-            : users.map((u) => (
+            : users.filter((u) => {
+              if (inputSearch === "") {
+                return u
+              } else if (
+                u.username
+                .toLowerCase()
+                .includes(inputSearch.toLowerCase())
+              ) {
+                return u;
+              }
+            }).map((u) => (
                 <div key={u.id}>
                   <div className={styles.list}>
                     <div className="id">
