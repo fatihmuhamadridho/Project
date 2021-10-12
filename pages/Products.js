@@ -421,7 +421,7 @@ const Products = () => {
 
       <div className="Header">
         <button onClick={() => setModalIsOpen(true)} className="bn54">
-          Add New Product
+          Create Product
         </button>
 
         {/* SEACRH PRODUCT BY TITLE */}
