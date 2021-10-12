@@ -206,7 +206,7 @@ const Products = () => {
         style={{
           content: {
             top: "50px",
-            left: "180px",
+            left: "250px",
             right: "40px",
             bottom: "40px",
           },
@@ -322,7 +322,7 @@ const Products = () => {
           style={{
             content: {
               top: "50px",
-              left: "180px",
+              left: "250px",
               right: "40px",
               bottom: "40px",
             },
