@@ -206,7 +206,7 @@ const Products = () => {
         style={{
           content: {
             top: "50px",
-            left: "250px",
+            left: "180px",
             right: "40px",
             bottom: "40px",
           },
@@ -322,7 +322,7 @@ const Products = () => {
           style={{
             content: {
               top: "50px",
-              left: "250px",
+              left: "180px",
               right: "40px",
               bottom: "40px",
             },
@@ -421,7 +421,7 @@ const Products = () => {
 
       <div className="Header">
         <button onClick={() => setModalIsOpen(true)} className="bn54">
-          Add New Product
+          Create Product
         </button>
 
         {/* SEACRH PRODUCT BY TITLE */}
@@ -439,6 +439,7 @@ const Products = () => {
           </form>
         </div>
       </div>
+      <br />
 
       <section>
         <section className="product">
@@ -500,7 +501,6 @@ const Products = () => {
                         >
                           <FontAwesomeIcon
                             icon={faPen}
-                            size="1x"
                             style={{ color: "blue" }}
                           />
                         </button>
